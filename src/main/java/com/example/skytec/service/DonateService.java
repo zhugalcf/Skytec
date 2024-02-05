@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReadWriteLock;
 
 public class DonateService {
 
-    private static DonateService instance;
+    private volatile static DonateService instance;
     private ReadWriteLock lock = Lock.getInstance();
     private TransactionDao transactionDao = TransactionDao.getInstance();
 

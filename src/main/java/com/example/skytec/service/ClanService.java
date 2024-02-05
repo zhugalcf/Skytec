@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ClanService {
 
-    private static ClanService instance;
+    private volatile static ClanService instance;
 
     private ClanService() {
     }

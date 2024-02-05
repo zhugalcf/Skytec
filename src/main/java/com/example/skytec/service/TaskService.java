@@ -8,7 +8,7 @@ import com.example.skytec.entity.Transaction;
 import java.util.concurrent.locks.ReadWriteLock;
 
 public class TaskService {
-    private static TaskService instance;
+    private volatile static TaskService instance;
     private ReadWriteLock lock = Lock.getInstance();
     private TransactionDao transactionDao = TransactionDao.getInstance();
 

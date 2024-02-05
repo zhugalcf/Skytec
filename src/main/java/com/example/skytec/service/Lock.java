@@ -3,7 +3,7 @@ package com.example.skytec.service;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Lock extends ReentrantReadWriteLock {
-    private static Lock instance;
+    private volatile static Lock instance;
 
     private Lock() {
     }
